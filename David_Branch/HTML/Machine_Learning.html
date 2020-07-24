@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,6 +16,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <!-- D3.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
@@ -25,38 +27,49 @@
 <link rel="shortcut icon" href="fantasy_football.png" type="image/x-icon">
 </head>
 <body>
-
+<nav>
   <div class="sidenav">
     <a href="index.html">Home Page</a>
     <a href="matplotlib.html">MatplotLib</a>
     <a href="tableau.html">Tableau</a>
     <a href="Machine_Learning.html">Machine Learning</a>
-  </div>
-<h1><b><u> Welcome to the 2020 Fantasy Football Dashboard</b></u><br>
-  <audio controls>
-    <source src="Football_Theme.mp3" />
-  </audio></h1>
-<div class="main">
-  
-<p><b><u>Goal</b></u></p>
+ </div>
+ </nav>
 
-The reason for this project was to create an indepth look into the world of Fantasy Football. 
-The Fantasy Football industry is a 70 BILLION Dollar a year machine and data analyze can help 
-find patterns or give us a comparative advantage over our opponents. Please for free to navigate 
-our dashboard page and feel free to ask any questions. 
 
-</div>
-<div class="main">
-  <p><b><u>Programs used</b></u></p>
-  -Python <br>
-  -Tableau <br>
-  -Jupyter Notebook <br>
-  -Matplotlib <br>
-  -HTML/CSS  <br>
-  -Machine Learning models <br>
-  -Many different Python Modules (numpy, os, sklearn, etc) <br>
-  -Javascript <br>
-</div>
-    </body>
+    <div style="text-align:center"> 
+      <button onclick="playPause()">Play/Pause</button> 
+      <button onclick="makeBig()">Big</button>
+      <button onclick="makeSmall()">Small</button>
+      <button onclick="makeNormal()">Normal</button>
+      <br><br>
+      <video id="video1" width="420">
+        <source src="Machine3.mp4" type="video/mp4">
+      </video>
+    </div> 
+    
+    <script> 
+    var myVideo = document.getElementById("video1"); 
+    
+    function playPause() { 
+      if (myVideo.paused) 
+        myVideo.play(); 
+      else 
+        myVideo.pause(); 
+    } 
+    
+    function makeBig() { 
+        myVideo.width = 700; 
+    } 
+    
+    function makeSmall() { 
+        myVideo.width = 320; 
+    } 
+    
+    function makeNormal() { 
+        myVideo.width = 420; 
+    } 
+    </script> 
+</body>
 
 </html>
